@@ -1,14 +1,14 @@
 import { addDoc, collection, getFirestore } from "@firebase/firestore";
 
 export const PROJECT_NAME = 'test';
-export const APP_TITLE = "Amazing app";
+export const APP_TITLE = "Shout Quietly";
 export const APP_ICON = ''; // favicon_white.png
-export const SITE_URL = '';
-export const TWITTER_HANDLE = '@myaccount';
+export const SITE_URL = 'https://www.shoutquietly.xyz';
+export const TWITTER_HANDLE = '@shoutquietly'; // Pay to send this to Twitter.
 
 // Template ID is set in SendGrid and accepts substitution variables
 export const EMAIL_API_SERVER = '';
-export const SUPPORT_EMAIL = '...@gmail.com';
+export const SUPPORT_EMAIL = 'hello@webbi.co.nz';
 export const API_URL = '/'
 
 export const MESSAGE_COLLECTION = 'Messages';
