@@ -1,0 +1,50 @@
+.StandardButton {
+    
+    // margin: 1.5rem 1rem;
+
+    &.margin_left {
+        margin-left: 0;
+    }
+
+    .inner {
+        margin: auto;
+        padding: .5rem 1rem;
+        border-radius: 0;
+        width: fit-content;
+
+        background-color: var(--cta);
+        font-weight: 700;
+        color: white;
+        font-size: 1.25rem;
+        cursor: pointer;
+        transition: background-color 75ms ease-in-out;
+        box-shadow: inset 1px -24px 2px -20px rgb(0 0 0 / 20%);
+
+        &.margin_left {
+            margin-left: 0;
+        }
+
+        &:hover {
+            background-color: var(--cta-hover);
+        }
+
+        &.is_max_width {
+            width: 100%;
+        }
+
+        &.is_cta {
+            background-color: var(--cta);
+
+            &:hover {
+                background-color: var(--cta-hover);
+            }
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+    }
+}
