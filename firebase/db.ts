@@ -1,5 +1,57 @@
-import { getFirestore, addDoc, collection, getDoc, getDocs, deleteDoc, doc, query, where, orderBy, OrderByDirection, updateDoc, QueryConstraint } from "firebase/firestore";
-// import { SearchResult } from "../models/SearchResult";
+import { getFirestore, addDoc, collection, getCountFromServer, getDoc, getDocs, deleteDoc, doc, query, where, orderBy, OrderByDirection, updateDoc, QueryConstraint, limit, FieldPath, setDoc, onSnapshot } from "firebase/firestore";
+import { MESSAGE_COLLECTION, PROJECT_NAME } from "../constants";
+
+export const FIRESTORE_getLatestMessage = async () => {
+    const db = getFirestore();
+
+    const collectionRef = collection(db, MESSAGE_COLLECTION);
+
+    const q = query(collectionRef, orderBy('date', 'desc'), limit(1))
+
+    const querySnapshot = await getDocs(q);
+
+    if (querySnapshot.docs.length > 0) {
+        
+        return querySnapshot.docs[0].data();
+    }
+    else return undefined;
+
+}
+
+export const FIRESTORE_getMessageCount = async (): Promise<number> => {
+    const db = getFirestore();
+
+    const snapshot = await getCountFromServer(collection(db, MESSAGE_COLLECTION));
+    return snapshot.data().count;
+}
+
+export const FIRESTORE_listenLatestMessage = async (cb) => {
+    const db = getFirestore();
+    
+    const q = query(collection(db, MESSAGE_COLLECTION));
+    var unsubscribe = onSnapshot(q, (docSnapshot) => {
+        // docSnapshot.
+        // cb(docSnapshot.data() || {});
+    });
+}
+
+
+export const FIRESTORE_writeMessage = async (data) => {
+    const db = getFirestore();
+    
+    const collectionRef = collection(db, MESSAGE_COLLECTION);
+    
+    return await addDoc(collectionRef, data);
+}
+
+export const FIRESTORE_getMessageHistory = async () => {
+    const db = getFirestore();
+
+    const collectionRef = collection(db, MESSAGE_COLLECTION);
+
+    const snapshot = await getDocs(query(collectionRef, orderBy('date', 'desc'), limit(150)));
+    return snapshot.docs.map((doc, i) => doc.data());
+}
 
 /*
 export const FIRESTORE_search = async (

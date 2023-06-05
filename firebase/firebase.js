@@ -7,9 +7,14 @@ import { getAuth } from "firebase/auth";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 const firebaseConfig = {
-    // Paste in firestore configuration here.
-    projectId: 'abc'
-}
+    apiKey: "AIzaSyC-zbnM3WFg4rvFerbALCkhAwZ3JogYEvw",
+    authDomain: "passitforward-7662c.firebaseapp.com",
+    projectId: "passitforward-7662c",
+    storageBucket: "passitforward-7662c.appspot.com",
+    messagingSenderId: "273480932624",
+    appId: "1:273480932624:web:c9a347b09edb607de91995",
+    measurementId: "G-LESXXQPHBY"
+};
   
 var app;
 

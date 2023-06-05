@@ -9,8 +9,9 @@
     .inner {
         margin: auto;
         padding: .5rem 1rem;
-        border-radius: 0;
+        border-radius: var(--border-radius);
         width: fit-content;
+        text-align: center;
 
         background-color: var(--cta);
         font-weight: 700;
@@ -44,6 +45,9 @@
             display: flex;
             align-items: center;
             white-space: nowrap;
+            text-align: center;
+            margin: auto;
+            width: fit-content;
         }
 
     }

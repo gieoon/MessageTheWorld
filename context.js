@@ -19,7 +19,7 @@ function GlobalContextProvider(props) {
         
         // Load dynamic content here if it needs to be refreshed.
 //         loadDynamicDataSnapshot(PROJECT_NAME, 'DynamicListCollectionName', (t) => setDynamicList(t));
-        loadWebpageDataSnapshot(PROJECT_NAME, (w) => setWebsiteContent(w));
+        // loadWebpageDataSnapshot(PROJECT_NAME, (w) => setWebsiteContent(w));
         
         // Loading spreadsheet data that has been saved into CMS via Appscript + Firebase Service Account.
         // ./saveToFirestore.appscript

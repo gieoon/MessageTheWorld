@@ -94,7 +94,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <CMS allowedOrigins={["ineednature.co.nz", "example.co.nz", "localhost:3000"]}
               templates={cmsTemplates} />
       
-          <Header />
+          { router.pathname !== '/history' ? <Header /> : <></> }
 
           <Component {...pageProps}  />
 
@@ -102,7 +102,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
           <FloatingHeader isVisible={isFloatingHeaderVisible} />
 
-          <FullScreenMenu />
+          {/* <FullScreenMenu /> */}
         </>
       }
     </GlobalContextProvider>

@@ -1,19 +1,19 @@
 :root{
-  --primary: rgb(248, 199, 39);
-  --secondary: rgb(228, 98, 113);
+  --primary: #3f3f3f;
+  --secondary: rgb(125, 215, 110);
   --primary-dark: rgb(168, 130, 5);
   --primary-hover: rgb(128, 130, 5);
-  --accent:rgb(248, 229, 121);
   --background: rgb(31,31,31);
   --background-light: rgb(81,81,81);
   --cta: #1e95a6;
   --cta-hover : #1b8695;
-  --notice: rgb(218,76,82);
+  --accent: #95b9be;
   --text-color: rgb(245,245,245);
-
+  --max-page-width: 560px;
+  --border-radius: 16px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700;900;&display=swap');
 html,
 body {
   padding: 0;
@@ -31,6 +31,11 @@ body {
 
 html,
 body {
+  /* font-family: canopyFont; */
+  font-family: 'Merriweather', serif;
+}
+
+.submit {
   font-family: canopyFont;
 }
 

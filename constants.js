@@ -1,7 +1,7 @@
 import { addDoc, collection, getFirestore } from "@firebase/firestore";
 
 export const PROJECT_NAME = 'test';
-export const APP_TITLE = "";
+export const APP_TITLE = "Amazing app";
 export const APP_ICON = ''; // favicon_white.png
 export const SITE_URL = '';
 export const TWITTER_HANDLE = '@myaccount';
@@ -11,6 +11,7 @@ export const EMAIL_API_SERVER = '';
 export const SUPPORT_EMAIL = '...@gmail.com';
 export const API_URL = '/'
 
+export const MESSAGE_COLLECTION = 'Messages';
 
 export const cmsTemplates = {
     // uniqueArray: [

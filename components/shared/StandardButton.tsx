@@ -3,6 +3,8 @@ import { ArrowRightCircle } from 'react-feather';
 import { ANALYTICS_logEvent } from '../../firebase/analytics';
 import styles from '../../styles/shared/StandardButton.module.scss';
 
+
+
 export default function StandardButton({
     text,
     cb,
@@ -21,14 +23,14 @@ export default function StandardButton({
             <div className={styles.inner + " " + (isCta ? styles.is_cta : '') + " " + (isMaxWidth ? styles.is_max_width : '') + " " + (leftAlign ? styles.margin_left : '')} 
                 onClick={() => {
                     ANALYTICS_logEvent(text + ' pressed', {});
-                    cb();
+                    if (cb) cb();
                 }} 
                 // style={{
                 //     marginLeft: leftAlign ? '0' : ''
                 // }}
                 >
                 {/* <span>Make a booking</span> */}
-                <span>{text}
+                <span className='submit'>{text}
                     <KeyboardArrowRight sx={{width: '32px', height: '32px'}} />
                 </span>
             </div>
