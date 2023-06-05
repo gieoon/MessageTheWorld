@@ -72,9 +72,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const defaultMetaTitle = "Change your website's title";
   const defaultMetaDescription = "This is your website's description";
 
-  return <PageTransition>
-
-      <GlobalContextProvider>
+  return <GlobalContextProvider>
       
       <Head>
           <title>{defaultMetaTitle}</title>
@@ -106,8 +104,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         </>
       }
     </GlobalContextProvider>
-    
-  </PageTransition>
 }
 
 export default MyApp
